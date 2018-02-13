@@ -18,7 +18,7 @@ h1{
     margin-left: auto;
 
     font-size: 36pt;
-    font-weight: bolder;
+    font-weight: bold;
     font-family: monospace;
     line-height: 100px;
     text-align: center;
@@ -76,6 +76,6 @@ input[type="button"]:disabled{
 fieldset{
     border: 0;
 }
-label{
-
+textarea{
+    overflow: scroll;
 }

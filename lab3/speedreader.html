@@ -5,25 +5,25 @@
     <link href="speedreader.css" type="text/css" rel="stylesheet"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Speed Reader</title>
 </head>
 <body>
 <h1>Speed Reader</h1>
-<div id="readbox" style="font-size:36pt;">GIT READY 2 READ</div>
+<div id="readbox">GIT READY 2 READ</div>
 <div id="controls">
     <div class="inputfields">
         <label class="labels" for="start">Play Controls:<br/></label>
-        <button id="start" class="buttons" type="button" onclick="start()">
-            <label for="start">Start</label>
+        <button id="start" class="buttons" type="button">
+            Start
         </button>
-        <button id="stop" class="buttons" type="button" disabled onclick="stop()">
-            <label for="stop" >Stop</label>
+        <button id="stop" class="buttons" type="button" disabled>
+            Stop
         </button>
     </div>
     <div class="inputfields">
         <label class="labels" for="speeds">Speed:<br/></label>
         <select id="speeds">
-            <option value="500" onclick="setSpeed()">50 wpm </option>
+            <option value="500">50 wpm </option>
             <option value="200">300 wpm</option>
             <option value="171" selected="selected">350 wpm</option>
             <option value="150">400 wpm</option>
@@ -32,15 +32,15 @@
         </select>
     </div>
     <div class="inputfields">
-        <label class="labels" for="size">Size</label>
+        <label class="labels" for="medium">Size:</label>
         <fieldset id="size">
-            <input type="radio" id="medium" name="size" checked="checked" onclick="fontMedium()" />
+            <input type="radio" id="medium" name="size" value="36pt" checked="checked"/>
             <label for="medium">Medium</label>
 
-            <input type="radio" id="big" name="size" onclick="fontBig()"/>
+            <input type="radio" id="big" name="size" value="48pt"/>
             <label for="big">Big</label>
 
-            <input type="radio" id="bigger" name="size" onclick="fontBigger()"/>
+            <input type="radio" id="bigger" name="size" value="60pt"/>
             <label for="bigger">Bigger</label>
         </fieldset>
 
@@ -48,7 +48,7 @@
     <div id="sizer"></div>
 </div>
 <label for="inputbox"></label>
-<textarea id="inputbox" rows="10" cols="80" style="overflow: scroll;">Input your texters in here bro</textarea>
+<textarea id="inputbox" rows="10" cols="80">Input your texters in here bro</textarea>
     <a href="https://webster.cs.washington.edu/validate-html.php"><img class="icons"  style="left: 0;"
             src="https://webster.cs.washington.edu/images/w3c-html-blue.png" alt="Valid HTML5"/></a><br/>
 

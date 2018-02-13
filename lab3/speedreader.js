@@ -6,6 +6,15 @@ var punctuation = ",.!?;:";
 var speed = 500;
 var currentSpeed = 0;
 
+window.onload = function(){
+    document.getElementById("start").addEventListener("click",start);
+    document.getElementById("stop").addEventListener("click",stop);
+    document.getElementById("medium").addEventListener("click",fontSize);
+    document.getElementById("big").addEventListener("click",fontSize);
+    document.getElementById("bigger").addEventListener("click",fontSize);
+
+};
+
 
 function start(){
     //alert("*t")
@@ -36,7 +45,6 @@ function start(){
     setTimer();
 }
 function stop(){
-    //alert("stahp")
     var startButton = document.getElementById("start");
     var stopButton = document.getElementById("stop");
     stopButton.disabled = true;
@@ -49,21 +57,16 @@ function stop(){
     clearInterval(timer);
 
 }
-function fontMedium(){
-    document.getElementById("readbox").style.fontSize = "36pt";
-}
-function fontBig(){
-    document.getElementById("readbox").style.fontSize = "48pt";
-}
-function fontBigger(){
-    document.getElementById("readbox").style.fontSize = "60pt";
+function fontSize(){
+    document.getElementById("readbox").style.fontSize = this.value;
 }
 
 function displayWord() {
     speed = document.getElementById("speeds").value;
     if(speed !== currentSpeed){
+        clearInterval(timer);
         setTimer();
-    }else {
+    }
         var output = document.getElementById("readbox");
         if (frames.length > 0) {
             output.innerHTML = frames.shift();
@@ -76,13 +79,9 @@ function displayWord() {
             document.getElementById("inputbox").disabled = false;
             frames = [];
         }
-    }
 }
  function setTimer(){
     currentSpeed = speed;
     timer = setInterval(displayWord,speed);
-
- }
- function setSpeed(){
 
  }
