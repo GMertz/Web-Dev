@@ -1,0 +1,59 @@
+body{
+    font-family: cursive;
+    font-size: 14pt;
+    text-align: center;
+}
+#puzzlearea{
+    height:400px;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+
+}
+#controls{
+    margin-right: auto;
+    margin-left: auto;
+
+}
+#output{
+    margin-right: auto;
+    margin-left: auto;
+
+}
+#w3c{
+    margin-right: auto;
+    margin-left: auto;
+
+}
+h1{
+    margin-right: auto;
+    margin-left: auto;
+}
+p{
+    margin-right: auto;
+    margin-left: auto;
+}
+.pieces{
+    width: 90px;
+    height: 90px;
+    border: black 6px solid;
+    font-size: 40pt;
+    position: absolute;
+    background-image: url("jensmache.jpg");
+    background-size: 400px 400px;
+    /*float: left;*/
+}
+.blank{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+}
+.pieces:hover{
+    cursor: default;
+}
+.moveable:hover{
+    border: red 6px solid;
+    color: red;
+    cursor: pointer;
+}
