@@ -35,9 +35,9 @@ p{
     margin-left: auto;
 }
 .pieces{
-    width: 90px;
-    height: 90px;
-    border: black 6px solid;
+    width: 91px;
+    height: 91px;
+    border: black 5px solid;
     font-size: 40pt;
     position: absolute;
     background-image: url("jensmache.jpg");
@@ -53,7 +53,7 @@ p{
     cursor: default;
 }
 .moveable:hover{
-    border: red 6px solid;
+    border: red 5px solid;
     color: red;
     cursor: pointer;
 }
