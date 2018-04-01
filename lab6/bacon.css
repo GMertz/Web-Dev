@@ -1,0 +1,75 @@
+#banner{
+	background: url('https://webster.cs.washington.edu/images/kevinbacon/banner-background.png') repeat;
+	color: white;
+	overflow: hidden;
+	padding: 8px;
+	margin: 0px;
+}
+#main{
+	margin: auto;
+	width: 90%;
+	background-color: white;
+	overflow: hidden;
+	font-size: 12pt;
+
+}
+#w3c{
+	background: url('https://webster.cs.washington.edu/images/kevinbacon/banner-background.png') repeat;
+	color: white;
+	overflow: hidden;
+	padding: 8px;
+	text-align: left;
+	margin: 0px;
+}
+body{
+	background-color: #dad9d4;
+	font-family: "Verdana", sans-serif;
+	color: black;
+	background-color: white;
+	text-align: center;
+
+
+}
+caption{
+	font-size: 14pt;
+
+}
+h1{
+	text-align: center;
+	font-size: 20pt;
+	color: black;
+}
+h2{
+	text-align: center;
+	font-size: 18pt;
+	color: black;
+	margin: 5px;
+}
+form{
+	width: 80%;
+	margin: auto;
+	background-color: white;
+	overflow: hidden;
+	font-size: 16pt;
+	border: 1px;
+	padding: 0px;
+	margin-bottom: 5px ;
+	margin-top: 5px;
+}
+table{
+	margin: auto;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+th{
+	font-weight: bolder;
+}
+td{
+	padding: 5px;
+}
+.odd{
+	background-color: #ddddd9;
+
+}
+.even{
+}
