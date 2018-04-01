@@ -1,1 +1,0 @@
-subl.exe mymdb.php && subl.exe bacon.css && subl.exe search-all.php && subl.exe search-kevin.php && subl.exe common.php
