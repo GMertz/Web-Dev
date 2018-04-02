@@ -21,8 +21,8 @@
 		$baconid = $baconid['id'];
 
 		$otherid = $db->query("SELECT DISTINCT * from actors a
-							WHERE a.first_name LIKE ('%$fn%') AND 
-							a.last_name LIKE ('%$ln%') ");
+							WHERE a.first_name LIKE ('$fn%') AND 
+							a.last_name = '$ln' ");
 		$otherid = $otherid->fetch(PDO::FETCH_ASSOC);
 		$otherid = $otherid['id'];
 
@@ -35,6 +35,7 @@
 							OR a.id = '$otherid') 
 							GROUP BY m.name 
 							HAVING COUNT(m.name) > 1");
+		$count = $rows->rowCount();
 		}
 		catch(PDOException $ex) {
 		echo ("Sorry, the database isnt working, try again later. <br /> Error Message: {$ex->getMessage()}");
@@ -58,16 +59,19 @@
 
 			<div id="main">
 				<?php
-				$count = $rows->rowCount();
-				if($count === 0){
-					echo "No connections found in DataBase!</h1>";
+				if($otherid->rowCount() === 0){
+					echo "Actor $fn $ln was not found."
+				}
+				else if($count ===  0 ){
+					echo "No connections found!</h1>";
 				}else{
 				?>
 				<h1>(<?=($count)?>) Results for Movies with <?=$fn?> <?=$ln?></h1>
 				<div>
-					<table>
 					<caption>
 						Films with <?=$fn?> <?=$ln?> and Kevin Bacon</caption>
+					<table>
+					
 					<tr>
 						<th>#</th>
 						<th>Title</th> 
@@ -75,7 +79,7 @@
 
 					</tr>
 					<?php 
-					$i = 0;
+					$i = 1;
 					foreach ($rows as $r) {
 						if($i % 2 == 0){
 							$class = 'even';

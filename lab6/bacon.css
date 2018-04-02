@@ -4,6 +4,7 @@
 	overflow: hidden;
 	padding: 8px;
 	margin: 0px;
+	text-align: left;
 }
 #main{
 	margin: auto;
@@ -27,7 +28,6 @@ body{
 	color: black;
 	background-color: white;
 	text-align: center;
-
 
 }
 caption{
@@ -66,6 +66,9 @@ th{
 }
 td{
 	padding: 5px;
+}
+tbody{
+	border: 1px grey solid;
 }
 .odd{
 	background-color: #ddddd9;
