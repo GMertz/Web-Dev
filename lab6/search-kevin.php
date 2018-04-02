@@ -39,7 +39,7 @@
 		$count = $rows->rowCount();
 		}
 		catch(PDOException $ex) {
-		echo ("Sorry, the database isnt working, try again later. <br /> Error Message: {$ex->getMessage()}");
+		echo ("Sorry, the database isnt working, try again later. <br />");
 		} 
 
 		?>
