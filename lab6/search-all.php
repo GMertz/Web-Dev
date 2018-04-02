@@ -16,11 +16,11 @@
 		$db = new PDO("mysql:host=$servername;dbname=$database;charset=utf8;port=$dbport", $username, $password);
 		//$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$actorid = $db->query("SELECT DISTINCT * from actors a
+		$actor = $db->query("SELECT DISTINCT * from actors a
 							WHERE a.first_name LIKE ('$fn%') AND 
 							a.last_name = '$ln' ORDER BY a.id ASC, a.film_count DESC");
-		$actorid = $actorid->fetch(PDO::FETCH_ASSOC);
-		$actorid = $actorid['id'];
+		$actor = $actor->fetch(PDO::FETCH_ASSOC);
+		$actorid = $actor['id'];
 
 
 		$rows = $db->query("SELECT name,year,rank,role 
@@ -57,9 +57,10 @@
 				
 				if($count === 0){
 					echo "<h1>$fn $ln not found in DataBase</h1>";
-					echo "here is the $actorid";
-				}else{
-				?>
+				}else{ 
+					$fn = $actor['first_name'];
+					$ln = $actor['last_name'];
+					?>
 				<h1> Results for Movies with <?=$fn?> <?=$ln?></h1>
 				<div>
 					<caption>

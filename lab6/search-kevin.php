@@ -20,11 +20,12 @@
 		$baconid = $baconid->fetch(PDO::FETCH_ASSOC);
 		$baconid = $baconid['id'];
 
-		$otherid = $db->query("SELECT DISTINCT * from actors a
+		$otheractor = $db->query("SELECT DISTINCT * from actors a
 							WHERE a.first_name LIKE ('$fn%') AND 
-							a.last_name = '$ln' ");
-		$otherid = $otherid->fetch(PDO::FETCH_ASSOC);
-		$otherid = $otherid['id'];
+							a.last_name = '$ln' ORDER BY a.id ASC, a.film_count DESC");
+		$otheractor = $otheractor->fetch(PDO::FETCH_ASSOC);
+		$otherid = $otheractor['id'];
+
 
 		//print($otherid);
 		$rows = $db->query("SELECT m.name, m.year
@@ -59,12 +60,13 @@
 
 			<div id="main">
 				<?php
-				if($otherid->rowCount() === 0){
-					echo "Actor $fn $ln was not found."
-				}
-				else if($count ===  0 ){
+				if($otherid == 0){
+					echo "Actor $fn $ln was not found.";
+				}elseif($count ===  0){
 					echo "No connections found!</h1>";
 				}else{
+					$fn = $otheractor['first_name'];
+					$ln = $otheractor['last_name'];
 				?>
 				<h1>(<?=($count)?>) Results for Movies with <?=$fn?> <?=$ln?></h1>
 				<div>
