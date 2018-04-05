@@ -35,7 +35,7 @@
 							AND (a.id = '$baconid' 
 							OR a.id = '$otherid') 
 							GROUP BY m.name 
-							HAVING COUNT(m.name) > 1");
+							HAVING COUNT(m.name) > 1 ORDER BY m.year DESC");
 		$count = $rows->rowCount();
 		}
 		catch(PDOException $ex) {

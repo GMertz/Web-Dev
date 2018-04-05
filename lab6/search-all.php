@@ -27,7 +27,7 @@
 							FROM movies m 
 							JOIN roles r on m.id = r.movie_id
 							JOIN actors a on a.id = r.actor_id
-							WHERE a.id = '$actorid' ");
+							WHERE a.id = '$actorid' ORDER BY m.year DESC");
 
 
 		
