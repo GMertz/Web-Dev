@@ -1,0 +1,31 @@
+h1{
+	color: black;
+	font-size: 32pt;
+	font-weight: bolder;
+	text-align: center;
+}
+a{
+	color: black;
+	font-size: 24pt;
+	text-align: center;
+	margin: auto;
+	margin-top: 10px;
+	display: block;
+}
+#main{
+	padding: 5px;
+	background-color: lightgrey;
+	width: 600px;
+	height: 600px;
+	margin: auto;
+	border: 10px black solid;
+	border-radius: 50%;
+	text-align: center;
+}
+body{
+	background-color: #a5f497;
+}
+#links{
+text-align: center;
+padding:15%;
+}
